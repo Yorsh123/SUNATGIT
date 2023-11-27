@@ -1,0 +1,61 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <title>Facturación</title>
+    <meta http-equiv="Content-Type" content="charset=UTF-8" />
+
+    <!-- Google fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link th:href="@{/img/machanicalicon.png}" rel="icon">
+    <link th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+    <link th:href="@{/vendor/quill/quill.snow.css}" rel="stylesheet">
+    <link th:href="@{/vendor/quill/quill.bubble.css}" rel="stylesheet">
+    <link th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+    <link th:href="@{/vendor/simple-datatables/style.css}" rel="stylesheet">
+
+    <!-- Css Style -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!-- Navigation bar -->
+
+         <div class="container" th:fragment="header" th:replace="layouts/navigation :: header">
+
+        </div>
+
+
+
+    <footer th:fragment="footer" id="footer" class="footer fixed-bottom">
+        <div class="copyright">
+            &copy Copyright <strong><span>Bulling</span></strong>. Xd
+        </div>
+
+        <!-- JavaScript files -->
+        <script th:src="@{/vendor/apexcharts/apexcharts.min.js}"></script>
+        <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/vendor/chart.js/chart.umd.js}"></script>
+        <script th:src="@{/vendor/echarts/echarts.min.js}"></script>
+        <script th:src="@{/vendor/quill/quill.min.js}"></script>
+        <script th:src="@{/vendor/simple-datatables/simple-datatables.js}"></script>
+        <script th:src="@{/vendor/tinymce/tinymce.min.js}"></script>
+        <script th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+        <!-- Template Main JS File -->
+        <script th:src="@{/js/main.js}"></script>
+
+          </footer>
+
+</body>
+</html>

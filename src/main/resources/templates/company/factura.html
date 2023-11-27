@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/app :: head">
+</head>
+<body>
+
+<header th:replace="layouts/app :: header">
+
+</header>
+
+<main id="main" class="main">
+
+
+    <div class="pagetitle">
+        <h1>Crear factura</h1>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" >
+                    <div class="card-body" >
+                        <div >
+                            <form action="#" method="POST" autocomplete="off">
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form6Example1" >Correlativo</label>
+                                            <input type="text"  name="nameBusiness" id="form6Example1" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form6Example2">Fecha de emición</label>
+                                            <input type="date" id="form6Example2" class="form-control" name="documenttext"   />
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex justify-content-between">
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form6Example2"> Forma de pago</label>
+                                            <input type="text" id="form6Example2" class="form-control" name="documenttext"  />
+                                        </div>
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form6Example2">Valor de venta</label>
+                                            <input type="text" id="form6Example2" class="form-control" name="documenttext"  />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form6Example3">Monto</label>
+                                    <input type="number" name="email" id="form6Example3" class="form-control"  />
+                                </div>
+                                <div class="row mb-4 d-flex justify-content-between">
+                                    <div> </div>
+                                    <input type="button" name="email" id="form6Example3" class="btn btn-primary" value="Guardar" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer th:replace="layouts/app :: footer">
+
+</footer>
+<script>
+    function updateValidation() {
+        var types = document.getElementById("types");
+        var numbers = document.getElementById("numberType");
+
+        if (types.value === "ruc") {
+            numbers.setAttribute("maxlength", "11");
+            numbers.setAttribute("minlength", "11");
+            numbers.setAttribute("pattern", "[0-9]{11}");
+            numbers.setAttribute("title", "El RUC debe tener exactamente 11 dígitos numéricos");
+        } else if (types.value === "dni") {
+            numbers.setAttribute("maxlength", "8");
+            numbers.setAttribute("minlength", "8");
+            numbers.setAttribute("pattern", "[0-9]{8}");
+            numbers.setAttribute("title", "El DNI debe tener exactamente 8 dígitos numéricos");
+        }
+    }
+</script>
+</body>
+</html>
